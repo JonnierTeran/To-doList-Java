@@ -9,15 +9,17 @@ package com.mycompany.to_do_list;
  * @author jonnier andres teran
  */
 public class Task {
-   private String title, description;
+    //Propiedades de la tarea
+    private String title, description;
     private Boolean status;
     
-    public Task(){
+    public Task(){ //Constructor De la tarea, se inicializan los campos vacidos y el status en false
         this.title ="";
         this.description="";
         this.status = false;
     }      
 
+    //Metodos modificadores y de acceso set y get
     public String getTitle() {
         return title;
     }
@@ -45,6 +47,7 @@ public class Task {
     @Override
     public String toString() {
         String estado;
+        
         if(!status){
             estado = "Pendiente";
         }else {
